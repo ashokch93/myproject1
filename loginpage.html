@@ -1,0 +1,114 @@
+<html>
+
+<head>
+<style>
+ul
+{
+list-style-type:none ;
+margin: 0px;
+padding: 0px;
+width: 200px;
+position: fixed;
+height: 1000px;
+left: 0px;
+right: 0px;
+background-color: lightgray;
+
+}
+
+li a
+{
+display: block;
+color: black;
+text-decoration: none;
+padding: 10px 20px;
+
+
+
+}
+
+li a:hover
+{
+background-color: black;
+color: white;
+
+}
+
+
+
+#password{display:none;}
+
+.first {
+display: flex;
+justify-content: center;
+background-color: skyblue;
+height: 40%;
+width: 40%;
+margin-left: 426px;
+margin-top: 10px;
+
+
+}
+
+.second {
+
+margin-top: 95px;
+}
+
+.active
+{
+background-color: green;
+color: white;
+
+
+}
+
+</style>
+    <script>
+        function LoginClick() {
+            
+            var as = document.getElementById("enter id").value;
+            let ab = document.getElementById("enter password").value;
+            alert("Name is" + " " + as + " " + "password is" + " " + ab)
+            document.getElementById("maindiv").style.display="none";
+        }
+	function NextClick() {
+	document.getElementById("password").style.display="block";
+	document.getElementById("Username").style.display="none";
+    
+	
+}
+    </script>
+</head>
+
+   <ul>
+<li> <a href="index.html">home </a></li>
+<li> <a href="#">contact </a></li>
+<li> <a href="about.html">about </a></li>
+<li> <a href="services.html">services </a></li>
+<li class="active"> <a href="loginpage.html">loginpage </a></li>
+
+</ul>
+
+<body id="maindiv">
+    <div class="first">
+        <form class="second">
+	<div ID="Username">
+            <label for="enter id">Enter Your Username</label><br>
+            <input type="text" id="enter id" name="enter id" value=""><br><br>
+<button type="button" value="next" onclick="NextClick()">Next</button>
+</div>
+
+<div id="password">           
+ <label for="enter password">Enter Your Password</label><br>
+            <input type="text" name="enter password" id="enter password" value=""><br><br>
+	<button type="submit" value="next" onclick="LoginClick()">Login</button>
+            
+</div>
+        </form>
+    </div>
+
+ 
+</body>
+
+</html>
